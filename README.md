@@ -29,7 +29,7 @@ Sample ``docker run`` command structure:
 docker run -i --rm \
 	-v <folder_with_project_xml_file>:/opt/soapui/projects \
 	-v <folder_to_save_test_results>:/opt/soapui/projects/testresult \
-	lukastosic/soapui:<version> \
+	lukastosic/docker-soapui:<version> \
 	-e<endpoint_to_test> \
 	-s"<name_of_testsuite>" \
 	-r -j \
@@ -43,7 +43,7 @@ docker run -i --rm \
 
 ``-v`` is setting volumes between container and host system
 
-``lukastosic/soapui:<version>`` will take appropriate version of docker image from docker hub. You don't have to use ``:<version>`` section - it will use ``latest`` by default
+``lukastosic/docker-soapui:<version>`` will take appropriate version of docker image from docker hub. You don't have to use ``:<version>`` section - it will use ``latest`` by default
 
 #### Second section - testrunner.sh parameters
 
@@ -67,7 +67,7 @@ List of all CLI parameters: [CLI parameters](https://www.soapui.org/test-automat
 docker run -i --rm \
 	-v /myproject:/opt/soapui/projects \
 	-v /myproject/result:/opt/soapui/projects/testresult \
-	lukastosic/soapui \
+	lukastosic/docker-soapui \
 	-ehttp://mymuleproject:8080/mycoolapp \
 	-s"MyTestSuite" \
 	-r -j \
@@ -95,6 +95,6 @@ That image also contains tiny web server that runs on top of SoapUI that accepts
 
 ## Thanks to:
 
-- Dj(ddavison) : https://github.com/ddavison and his docker soap ui project: https://github.com/ddavison/docker-soapui
+- Dj(ddavison): https://github.com/ddavison and his docker soap ui project: https://github.com/ddavison/docker-soapui
 - Phong Nhu (INFOdation)
 - Hugo Pragt (INFOdation)
